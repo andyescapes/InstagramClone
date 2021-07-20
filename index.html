@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Quickpic</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- You can add your styles and scripts here -->
+    <link rel="stylesheet" type="text/css" media="screen" href="styles/provided.css" />
+    <script type="module" src="src/helpers.js"></script>
+    <script type="module" src="src/api.js"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+</head>
+
+<body id="body">
+    <header class="banner">
+        <h1 class="title_resize">Quickpic</h1>
+        <ul class="nav">
+            <li class="nav-item" id="feed_link">Feed</li>
+            <li class="nav-item" id="my_profile">My Profile</li>
+            <li class="nav-item" id="new_post"> + </li>
+        </ul>
+    </header>
+    <main role="main">
+        <div class="login post" id="login">
+            <label>
+                <h3>Username:</h3>
+                <input type="text" id="username">
+            </label>
+            <label>
+                <h3>Password:</h3>
+                <input type="password" id="password">
+            </label>
+            <label>
+                <h3>Confirm Password:</h3>
+                <input type="password" id="password_confirm">
+            </label>
+            <br><br>
+            <button type="button" id="login_button">Login</button>
+            <p>Don't have an account? Register below!</p>
+            <button id="register_button">Register</button>
+        </div>
+        <div class="register hidden post" id="register">
+            <h2>Register Now!</h2>
+            <label>
+                <h3>Username:</h3>
+                <input type="text" id="reg_username">
+            </label>
+            <label>
+                <h3>Password:</h3>
+                <input type="password" id="reg_password">
+            </label>
+            <label>
+                <h3>Confirm Password:</h3>
+                <input type="password" id="reg_password_confirm">
+            </label>
+            <label>
+                <h3>Email:</h3>
+                <input type="text" id="reg_email">
+            </label>
+            </label>
+            <h3>Name:</h3>
+            <input type="text" id="reg_name">
+            <label>
+            <br><br>
+            <button id="register_user">Register</button>
+            <p>Already have an account? Login below!</p>
+            <button id="login_link">Login </button>
+        </div>
+        <div class="feed hidden" id="feed">
+            <div id="notifications" class="post"></div>
+
+        </div>
+        <div class="hidden" id="profile_view">
+            <div class="post">
+                <h2>Profile</h2>
+                <h3 class="profile_font" id="profile_username">Username:</h3>
+                <h3 class="profile_font" id="profile_email">Email:</h3>
+                <h3 class="profile_font" id="profile_name">Name:</h3>
+                <h3 class="like_link" id="profile_following">Following:</h3>
+                <div id="following_list"></div>
+                <h3 class="profile_font" id="profile_followers">Followers:</h3>
+                <button class="profile_font" id="edit_details_button">Edit Details</button>
+            </div>
+            <div class="post" id="edit_profile_div">
+                <h3>Edit any of the following: </h3>
+                <p>(Leave blank if no changes)</p>
+                <h4>New Email: <input id="new_email" type="text"></h4>
+                <h4>New Name: <input id="new_name" type="text"></h4>
+                <h4>New Password: <input id="new_password" type="text"></h4>
+                <button id="submit_details">Confirm</button>
+            </div>
+
+            <div id="find_friends">
+            </div>
+
+            <div id="profile_view_posts">
+            </div>
+        </div>
+
+        <div class="pop_up hidden" id="error">
+            <div class="pop_up_contents">
+                <div class="x" id="exit_popup">X</div>
+                <p id="error_message"></p>
+            </div>
+        </div>
+
+        <div class="post_modal_pop_up hidden" id="post_modal">
+            <div class="post_modal_contents">
+                <div class="x" id="exit_post_modal">X</div>
+                <h4>Write your new post!</h4>
+                <h4>Description: <input id="input_desc" type="text"></h4>
+                <h4>Upload Image: <input id="input_src" type="file"></h4>
+                <button id="post_button">Post Now!</button>
+            </div>
+        </div>
+
+        <div class="post_modal_pop_up hidden" id="update_modal">
+            <div class="post_modal_contents">
+                <div class="x" id="exit_update_modal">X</div>
+                <h4>Enter your new description!</h4>
+                <input id="update_desc" type="text">
+                <button id="update_button">Confirm</button>
+            </div>
+        </div>
+    </main>
+    <footer id="footer">
+        <p>&copy; Quickpic</p>
+    </footer>
+    <script type="module" src="src/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,263 @@
+/* base styles, feel free to edit */
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #fafafa;
+    height: 100%;
+    font-family: -apple-system, 'Montserrat', 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.banner {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: white;
+    min-height: 60px;
+    border-bottom: 1px solid rgba(0, 0, 0, .0975);
+}
+
+footer {
+    border-top: 1px solid rgba(0, 0, 0, .0975);
+    padding: 10px;
+    background-color: white;
+    min-height: 60px;
+    text-align: right;
+}
+
+.banner>*,
+footer>* {
+    margin: 10px 25px;
+}
+
+.nav {
+    list-style-type: none;
+    padding: 0;
+}
+
+.nav-item {
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    margin: auto;
+    padding: 5px;
+    display: inline;
+    list-style-type: none;
+}
+
+
+/* Add your styles here */
+
+.hidden {
+    display: none;
+}
+
+.x {
+    position: absolute;
+    right: 15px;
+}
+
+h5 {
+    margin-top: 0;
+}
+
+img {
+    width: 100%;
+}
+
+.like_link:hover,
+.like_link:focus {
+    color: rgb(150, 150, 150);
+    text-decoration: none;
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.nav-item:hover,
+.x:hover,
+.x:focus {
+    color: grey;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.pop_up {
+    z-index: 1;
+    position: fixed;
+    left: 0;
+    top: 0;
+    background-color: rgb(0, 0, 0);
+    /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.4);
+    width: 100%;
+    height: 100%;
+}
+
+.post_modal_pop_up {
+    position: fixed;
+    left: 0;
+    top: 0;
+    background-color: rgb(0, 0, 0);
+    /* Fallback color */
+    background-color: rgba(94, 94, 94, 0.25);
+    width: 100%;
+    height: 100%;
+}
+
+.pop_up_contents {
+    position: relative;
+    background-color: white;
+    width: 80%;
+    height: 10%;
+    margin: 15% auto;
+    padding: 20px;
+}
+
+.post_modal_contents {
+    position: relative;
+    background-color: white;
+    width: 80%;
+    margin: 15% auto;
+    padding: 20px;
+}
+
+
+/* huge view */
+
+.post {
+    background-color: white;
+    width: 30%;
+    margin: 15px auto;
+    padding: 30px;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    box-shadow: 3px 5px 10px #e6e6e6;
+}
+
+
+/* standard view */
+
+@media (max-width: 1250px) {
+    .post {
+        background-color: white;
+        width: 40%;
+        margin: 15px auto;
+        padding: 5%;
+        -moz-box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+        box-shadow: 3px 5px 10px #e6e6e6;
+    }
+}
+
+
+/* tablet view */
+
+@media (max-width: 800px) {
+    .post {
+        background-color: white;
+        width: 60%;
+        margin: 15px auto;
+        padding: 5%;
+        -moz-box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+        box-shadow: 3px 5px 10px #e6e6e6;
+    }
+}
+
+
+/* mobile view */
+
+@media (max-width: 440px) {
+    .post {
+        background-color: white;
+        width: 90%;
+        margin: 15px auto;
+        padding: 20px;
+        -moz-box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+        box-shadow: 3px 5px 10px #e6e6e6;
+    }
+    .title_resize {
+        font-size: 1.5em;
+    }
+    .banner>*,
+    footer>* {
+        margin: 0 0 0 10px;
+    }
+    body {
+        font-size: 80%;
+    }
+}
+
+
+/* button credit https://fdossena.com/?p=html5cool/buttons/i.frag */
+
+button {
+    display: inline-block;
+    padding: 0.35em 0.6em;
+    border: 0.1em solid #FFFFFF;
+    margin: 0 0.3em 0.3em 0;
+    border-radius: 0.12em;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+    color: black;
+    text-align: center;
+    transition: all 0.2s;
+    margin-right: 8px;
+}
+
+button:hover {
+    color: white;
+    background-color: black;
+}
+
+input {
+    width: 50%;
+    border: none;
+    border-bottom: 1px solid #ccc;
+}
+
+.name_position {
+    display: inline;
+    position: absolute;
+}
+
+.date_position {
+    text-align: right;
+    font-weight: 100;
+    font-size: 90%;
+    /* position: absolute;
+    right: 5%;
+    top: 16px; */
+}
+
+.profile_font {
+    font-weight: 100;
+}
+
+
+/* .post {
+    position: relative;
+} */
+
+
+/* h4 {
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+} */
+
+
+/* @media all and (max-width:30em) {
+    button {
+        display: block;
+        margin: 0.4em auto;
+    }
+} */
